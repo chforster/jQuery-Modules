@@ -40,7 +40,6 @@
 
 
     $.average = function (array) {
-        var total = 0;
       if ($.isArray(array)) {
           return $.sum(array) / array.length;
       }
