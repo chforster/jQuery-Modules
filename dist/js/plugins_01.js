@@ -22,3 +22,14 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+(function ($) {
+    "use strict";
+
+    var total = 0;
+
+    $.sum = function () {
+        return total;
+    };
+
+
+}(jQuery));
