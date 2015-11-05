@@ -98,8 +98,18 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#inventar th,
+#inventar td {
+    border: 1px solid #dadada;
+    padding: 2px;
+}
+#inventar td {
+    text-align: right;
+}
 
-
+#inventar td :first-child{
+    text-align: left;
+}
 
 
 
