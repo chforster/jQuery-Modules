@@ -3,16 +3,15 @@ jQuery(function ($) {
 
     var $inventar = $("#inventar tbody"),
 
-        mengen = $inventar
-            .find("td:nth-child(2)")
-            .map(function (index, element) {
-                return $(element).text();
-            }).get(),// .get() unwrapped ein jQuery Objekt
-        prices = $inventar
-            .find("td:nth-child(3)")
-            .map(function (index, element) {
-                return $(element).text();
-            }).get(),
+        findMap = function(array, column) {
+            return array
+                .find("td:nth-child(" + column + ")")
+                .map(function (index, element) {
+                    return $(element).text();
+                }).get(); // .get() unwrapped ein jQuery Objekt
+        },
+        mengen = findMap($inventar, 2),
+        prices = findMap($inventar, 3),
 
         sum = $.SWAROVSKI.sum(mengen),
         average = $.SWAROVSKI.average(prices);
