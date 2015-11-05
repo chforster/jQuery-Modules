@@ -14,10 +14,10 @@ jQuery(function ($) {
                 return $(element).text();
             }).get(),
 
-        sum = $.sum(mengen),
-        average = $.average(prices);
+        sum = $.SWAROVSKI.sum(mengen),
+        average = $.SWAROVSKI.average(prices);
 
     $("#sum").find("td:nth-child(2)").text(sum);
-    $("#average").find("td:nth-child(2)").text(average);
+    $("#average").find("td:nth-child(3)").text(average);
 
 });
