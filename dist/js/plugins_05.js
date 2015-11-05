@@ -34,7 +34,7 @@
             copyOffset: function (index) {
                 return {x: index, y: index};
             }
-        }
+        };
         options = $.extend(defaults, options);
         return this.each(function () {
             var i,
