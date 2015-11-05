@@ -18,6 +18,6 @@ jQuery(function ($) {
         average = $.average(prices);
 
     $("#sum").find("td:nth-child(2)").text(sum);
-    $("#average").find("td:nth-child(2)").text(average);
+    $("#average").find("td:nth-child(3)").text(average);
 
 });
