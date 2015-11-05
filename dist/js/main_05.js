@@ -3,8 +3,10 @@ jQuery(function ($) {
 
     $("h2").shadow({
         copies: 5,
-        opacity: 0.1,
-        offset: 0.3
+        opacity: 0.5,
+        copyOffset: function (index) {
+            return {x: -index, y: index *0.5};
+        }
     }).css("color", "orange");
 
 });

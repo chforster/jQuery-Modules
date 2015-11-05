@@ -31,19 +31,23 @@
         var defaults = {
             copies: 5,
             opacity: 0.1,
-            offset: 1
+            copyOffset: function (index) {
+                return {x: index, y: index};
+            }
         }
         options = $.extend(defaults, options);
         return this.each(function () {
             var i,
+                offset,
                 $original = $(this);
 
-            for (i = 1; i <=options.copies; i+=options.offset) {
+            for (i = 1; i <=options.copies; i+=1) {
+                offset = options.copyOffset(i);
                 $original.clone()
                     .css({
                         position: 'absolute',
-                        top: $original.offset().top + i,
-                        left: $original.offset().left + i,
+                        top: $original.offset().top + offset.y,
+                        left: $original.offset().left + offset.x,
                         margin: 0,
                         zIndex : -1,
                         opacity: options.opacity
